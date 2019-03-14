@@ -70,3 +70,7 @@ while True:
             stringOut=dataout.decode()
             if stringOut in valid:
                 eval(stringOut)
+            else:
+                if debugging:
+                    print('invalid input detected '+stringOut)
+                continue
