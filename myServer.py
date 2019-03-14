@@ -68,5 +68,5 @@ while True:
                 if not data:
                     break
             stringOut=dataout.decode()
-            if stringOut in valid
+            if stringOut in valid:
                 eval(stringOut)
