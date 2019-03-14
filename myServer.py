@@ -53,6 +53,8 @@ def googleBad():
 def stop():
     quit()
 
+valid = 'internetGood()', 'internetOK()', 'internetBad()', 'alexaGood()', 'alexaWarning()', 'alexaBad()', 'googleGood()', 'googleBad()'
+
 while True:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind((HOST, PORT))
@@ -66,4 +68,5 @@ while True:
                 if not data:
                     break
             stringOut=dataout.decode()
-            eval(stringOut)
+            if stringOut in valid
+                eval(stringOut)
