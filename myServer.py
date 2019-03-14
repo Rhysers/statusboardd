@@ -19,7 +19,7 @@ def internetOK():
     if debugging:
         print("Internet Green Light Pulse")
     board.one.off()
-    board.one.pulse(2,2)
+    board.one.green.pulse(2,2)
 def internetBad():
     if debugging:
         print("Internet Red Light Blink")
@@ -49,7 +49,9 @@ def googleBad():
     if debugging:
         print("Google Red Light On")
     board.three.off()
-    board.three.green.on()
+    board.three.red.on()
+def stop():
+    quit()
 
 while True:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
