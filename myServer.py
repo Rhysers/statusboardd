@@ -60,6 +60,8 @@ def alexaBad():
         print("Alexa Red Light Pulse")
     board.three.off()
     board.three.red.pulse(2,2)
+def stop():
+    quit()
 
 valid = 'internetGood()', 'internetOK()', 'internetBad()', 'alexaGood()', 'alexaWarning()', 'alexaBad()', 'stop()', 'noUpdates()', 'secUpdates()', 'updates()', 'needReboot()'
 
