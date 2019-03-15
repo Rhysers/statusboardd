@@ -25,35 +25,43 @@ def internetBad():
         print("Internet Red Light Blink")
     board.one.off()
     board.one.red.blink()
+def noUpdates():
+    if debugging:
+        print("Updates Green Light On")
+    board.two.off()
+    board.two.green.on()
+def secUpdates():
+    if debugging:
+        print("Updates red Light Pulse")
+    board.two.off()
+    board.two.red.pulse()
+def updates():
+    if debugging:
+        print("Upddates Red Light On")
+    board.two.off()
+    board.two.red.on()
+def needReboot():
+    if debugging:
+        print("Updates Blink")
+    board.two.off()
+    board.two.blink()
 def alexaGood():
     if debugging:
         print("Alexa Green Light On")
-    board.two.off()
-    board.two.green.on()
+    board.three.off()
+    board.three.green.on()
 def alexaWarning():
     if debugging:
         print("Alexa Green Light Pulse")
-    board.two.off()
-    board.two.green.pulse()
+    board.three.off()
+    board.three.green.pulse()
 def alexaBad():
     if debugging:
         print("Alexa Red Light Pulse")
-    board.two.off()
-    board.two.red.pulse(2,2)
-def googleGood():
-    if debugging:
-        print("Google Green Light On")
     board.three.off()
-    board.three.green.on()
-def googleBad():
-    if debugging:
-        print("Google Red Light On")
-    board.three.off()
-    board.three.red.on()
-def stop():
-    quit()
+    board.three.red.pulse(2,2)
 
-valid = 'internetGood()', 'internetOK()', 'internetBad()', 'alexaGood()', 'alexaWarning()', 'alexaBad()', 'googleGood()', 'googleBad()'
+valid = 'internetGood()', 'internetOK()', 'internetBad()', 'alexaGood()', 'alexaWarning()', 'alexaBad()', 'stop()', 'noUpdates()', 'secUpdates()', 'updates()', 'needReboot()'
 
 while True:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:

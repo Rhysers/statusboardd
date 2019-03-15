@@ -7,11 +7,20 @@ PORT = 65432        # The port used by the server
 myInput = str(sys.argv[1])
 
 if myInput == "1":
-    myOutput = b'InternetGood()'
+    myOutput = b'internetGood()'
 elif myInput == "2":
-    myOutput = b'InternetOK()'
+    myOutput = b'internetOK()'
 elif myInput == "3":
-    myOutput = b'InternetBad()'
+    myOutput = b'internetBad()'
+elif myInput == '4':
+    myOutput = b'noUpdates()'
+elif myInput == '5':
+    myOutput = b'secUpdates()'
+elif myInput == '6':
+    myOutput = b'updates()'
+elif myInput == '7':
+    myOutput = b'needReboot()'
+
 
 #print(myOutput)
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as socks:
