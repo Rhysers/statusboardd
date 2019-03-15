@@ -1,3 +1,5 @@
+#/bin/bash
+cd /etc/statusboardd/
 updates=$(/usr/lib/update-notifier/apt-check 2>&1)
 myUpdates=(${updates//;/ })
 if [[ "$updates" == "0;0" ]]

@@ -1,6 +1,6 @@
 #!/bin/bash
-
-debugging="True"
+cd /etc/statusboardd/
+debugging="False"
 
 if [ -z $1 ]
 then

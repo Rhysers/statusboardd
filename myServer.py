@@ -6,7 +6,7 @@ from gpiozero import StatusZero
 HOST = '127.0.0.5'
 PORT = 65432
 
-debugging = True
+debugging = False
 board = StatusZero( pwm=True )
 
 
