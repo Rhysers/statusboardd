@@ -4,7 +4,7 @@ debugging="False"
 
 if [ -z $1 ]
 then
-    echo -e "Usage: checkport [port number]"
+    echo -e "Usage: check-accessibility.sh [port number]"
     exit
 else
     IP_ADDRESS=$(curl --silent ifconfig.me/ip) > /dev/null
